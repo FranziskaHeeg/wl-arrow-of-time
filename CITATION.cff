@@ -4,6 +4,8 @@ title: "Weisfeiler and Leman Follow the Arrow of Time: Expressive Power of Messa
 type: software
 version: 1.0.0
 license: MIT
+doi: 10.5281/zenodo.24023818
+repository-code: "https://github.com/FranziskaHeeg/wl-arrow-of-time"
 authors:
   - family-names: Heeg
     given-names: Franziska

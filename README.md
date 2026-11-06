@@ -1,5 +1,7 @@
 # Weisfeiler and Leman Follow the Arrow of Time
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24023818.svg)](https://doi.org/10.5281/zenodo.24023818)
+
 Code for the NeurIPS 2026 paper *Weisfeiler and Leman Follow the Arrow of Time: Expressive Power of Message
 Passing in Temporal Event Graphs* (Franziska Heeg, Jonas Sauer, Petra Mutzel, Ingo Scholtes).
 
@@ -123,6 +125,9 @@ subject to the licenses and terms of the respective original repositories. Every
 in these directories starts with a notice that names the original repository and lists our changes.
 
 ## Citation
+
+The code is archived on Zenodo, DOI [10.5281/zenodo.24023818](https://doi.org/10.5281/zenodo.24023818)
+(this DOI always points to the latest version). If you use it, please cite the paper:
 
 ```bibtex
 @inproceedings{heeg2026weisfeiler,
