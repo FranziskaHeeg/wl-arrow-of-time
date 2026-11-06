@@ -43,7 +43,7 @@ baselines/
   gat/                    GAT on the time-concatenated graph
   dbgnn/                  De Bruijn GNN
   dlwl/                   DL-WL temporal graph kernel (with the vendored reference implementation tgkernel)
-  tgnn/                   TGAT, TGN, CAW, PINT (forks of the reference implementations) + embedding classifier
+  tgnn/                   TGN, CAW (forks of the reference implementations; TGAT, PINT follow) + embedding classifier
 data/raw/                 empirical temporal graphs (one timestamped edge per line)
 ```
 
@@ -107,8 +107,9 @@ published by the original authors. We thank them for making their code available
 * **PINT**: Souza et al., *Provably Expressive Temporal Graph Networks*, NeurIPS 2022.
   https://github.com/AaltoPML/PINT
 
-Our code in `baselines/tgnn/{tgat,tgn,caw,pint}` is a fork of these repositories; the changes are described in
-[`baselines/README.md`](baselines/README.md). The DL-WL baseline uses the reference implementation `tgkernel` of
+Our code in `baselines/tgnn/{tgn,caw}` is a fork of these repositories; the changes are described in
+[`baselines/README.md`](baselines/README.md). Our forks of TGAT and PINT, whose repositories do not specify a
+license, will be added in a later version; `baselines/README.md` lists the changes we made to them. The DL-WL baseline uses the reference implementation `tgkernel` of
 Oettershagen et al., *Temporal Graph Kernels for Classifying Dissemination Processes*, SDM 2020
 (https://gitlab.com/tgpublic/tgkernel), vendored in `baselines/dlwl/tgkernel/` with the changes listed in
 `PATCHES.md`. The DBGNN baseline and the temporal graph data structures use

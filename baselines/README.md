@@ -31,7 +31,7 @@ cmake -DCMAKE_BUILD_TYPE=Release .. && make
 
 ## TGAT, TGN, CAW, PINT (`tgnn/`)
 
-`tgnn/{tgat,tgn,caw,pint}` are forks of the reference implementations
+We used forks of the reference implementations
 
 * TGAT: https://github.com/StatsDLMathsRecomSys/Inductive-representation-learning-on-temporal-graphs
 * TGN: https://github.com/twitter-research/tgn
@@ -43,6 +43,29 @@ node of every event is saved to `embeddings/`. Smaller changes: PINT uses a 50/2
 zero node features, TGN uses 16-dim zero node features (`utils/preprocess_data.py`), and TGN and PINT do not save
 the trained model. Each model has its own dependencies, see the README and environment files in its
 directory.
+
+**This version contains the forks of TGN (`tgnn/tgn/`) and CAW (`tgnn/caw/`) only.** The TGAT and PINT
+repositories do not specify a license, so we do not redistribute our modified copies yet; they will be added in a
+later version of this repository once we have the authors' permission. Until then, the two forks can be
+recreated from the upstream code with the following changes.
+
+* TGAT, `learn_edge.py`: add a flag `--embeddings {true,false}`; after training, compute
+  `tgan.tem_conv(src_l, ts_l, tgan.num_layers, num_neighbors=20)` for all events and save the result and `src_l` as
+  `embeddings/TGAN_{data}_embedding.npy` and `embeddings/TGAN_{data}_src_nodes.npy`; use
+  `EarlyStopMonitor(tolerance=0.0, max_round=50)`; skip empty batches and splits; do not save model checkpoints;
+  fall back to the CPU if no GPU is available; call `random.sample` on a list (Python ≥ 3.11).
+  `module.py`: reshape the neighbour features with their actual feature dimension and add a batch dimension to
+  one-dimensional attention outputs (needed for graphs with a single event per batch).
+* PINT, `train.py`: add a flag `--embeddings` (default `true`); after training, compute
+  `tgn.compute_temporal_embeddings(full_data.sources, full_data.destinations, full_data.timestamps,
+  full_data.edge_idxs)` and save the source embeddings and `full_data.sources` as
+  `embeddings/PINT_{data}_embedding.npy` and `embeddings/PINT_{data}_src_nodes.npy`; do not save the model.
+  `utils/data_processing.py`: temporal split at the 0.50 and 0.75 quantiles (instead of 0.70 and 0.85);
+  `random.sample` on a list. `utils/preprocess_data.py`: 16-dim zero node features (instead of 172).
+  `utils/utils.py`: `partition_size = 100, last = 0` for datasets other than wikipedia and reddit.
+
+The `run_pipeline.sh` scripts for TGAT and PINT, which run these forks on every temporal graph, will be added
+together with the forks.
 
 The pipeline has two steps per model.
 
