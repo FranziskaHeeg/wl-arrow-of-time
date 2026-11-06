@@ -44,10 +44,8 @@ zero node features, TGN uses 16-dim zero node features (`utils/preprocess_data.p
 the trained model. Each model has its own dependencies, see the README and environment files in its
 directory.
 
-**This version contains the forks of TGN (`tgnn/tgn/`) and CAW (`tgnn/caw/`) only.** The TGAT and PINT
-repositories do not specify a license, so we do not redistribute our modified copies yet; they will be added in a
-later version of this repository once we have the authors' permission. Until then, the two forks can be
-recreated from the upstream code with the following changes.
+**This repository contains the forks of TGN (`tgnn/tgn/`) and CAW (`tgnn/caw/`).** For TGAT and PINT, apply
+the following changes to the upstream code.
 
 * TGAT, `learn_edge.py`: add a flag `--embeddings {true,false}`; after training, compute
   `tgan.tem_conv(src_l, ts_l, tgan.num_layers, num_neighbors=20)` for all events and save the result and `src_l` as
@@ -64,8 +62,8 @@ recreated from the upstream code with the following changes.
   `random.sample` on a list. `utils/preprocess_data.py`: 16-dim zero node features (instead of 172).
   `utils/utils.py`: `partition_size = 100, last = 0` for datasets other than wikipedia and reddit.
 
-The `run_pipeline.sh` scripts for TGAT and PINT, which run these forks on every temporal graph, will be added
-together with the forks.
+TGAT uses the same input format as CAW and PINT the same as TGN, so `caw/run_pipeline.sh` and
+`tgn/run_pipeline.sh` can be adapted to run them on every temporal graph.
 
 The pipeline has two steps per model.
 
