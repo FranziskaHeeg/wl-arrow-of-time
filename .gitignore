@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# generated data, caches and results
+data/processed/
+cache/
+results/
+
+# baseline working directories
+baselines/dlwl/tgkernel/release/
+baselines/tgnn/*/processed/
+baselines/tgnn/*/data/
+baselines/tgnn/*/embeddings/
+baselines/tgnn/*/pos_features/
+baselines/tgnn/*/results/
+baselines/tgnn/*/log/
+baselines/tgnn/*/saved_models/
+baselines/tgnn/*/saved_checkpoints/
+baselines/tgnn/*/best_models/
+
+# local working notebook (contains machine-specific paths)
+test.ipynb

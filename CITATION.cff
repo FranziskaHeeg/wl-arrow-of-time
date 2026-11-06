@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Weisfeiler and Leman Follow the Arrow of Time: Expressive Power of Message Passing in Temporal Event Graphs (code)"
+type: software
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Heeg
+    given-names: Franziska
+  - family-names: Sauer
+    given-names: Jonas
+  - family-names: Mutzel
+    given-names: Petra
+  - family-names: Scholtes
+    given-names: Ingo
+preferred-citation:
+  type: conference-paper
+  title: "Weisfeiler and Leman Follow the Arrow of Time: Expressive Power of Message Passing in Temporal Event Graphs"
+  authors:
+    - family-names: Heeg
+      given-names: Franziska
+    - family-names: Sauer
+      given-names: Jonas
+    - family-names: Mutzel
+      given-names: Petra
+    - family-names: Scholtes
+      given-names: Ingo
+  collection-title: "Advances in Neural Information Processing Systems"
+  year: 2026
