@@ -110,7 +110,7 @@ published by the original authors. We thank them for making their code available
 Our code in `baselines/tgnn/{tgat,tgn,caw,pint}` is a fork of these repositories; the changes are described in
 [`baselines/README.md`](baselines/README.md). The DL-WL baseline uses the reference implementation `tgkernel` of
 Oettershagen et al., *Temporal Graph Kernels for Classifying Dissemination Processes*, SDM 2020
-(https://github.com/chrsmrrs/tgkernel), vendored in `baselines/dlwl/tgkernel/` with the changes listed in
+(https://gitlab.com/tgpublic/tgkernel), vendored in `baselines/dlwl/tgkernel/` with the changes listed in
 `PATCHES.md`. The DBGNN baseline and the temporal graph data structures use
 [pathpyG](https://github.com/pathpy/pathpyG).
 
@@ -118,7 +118,8 @@ Oettershagen et al., *Temporal Graph Kernels for Classifying Dissemination Proce
 
 The code of our method (`egnn/`, `scripts/` and the baseline scripts written by us) is released under the
 [MIT License](LICENSE). The forked third-party code in `baselines/tgnn/` and `baselines/dlwl/tgkernel/` remains
-subject to the licenses and terms of the respective original repositories.
+subject to the licenses and terms of the respective original repositories. Every file we changed
+in these directories starts with a notice that names the original repository and lists our changes.
 
 ## Citation
 

@@ -1,3 +1,10 @@
+# Modified by Franziska Heeg, Jonas Sauer, Petra Mutzel, Ingo Scholtes (2026) for
+# "Weisfeiler and Leman Follow the Arrow of Time" (NeurIPS 2026).
+# Based on the TGN reference implementation: https://github.com/twitter-research/tgn (Apache License 2.0, see LICENSE).
+# Changes to the original file:
+#   - added compute_temporal_embeddings_pos (embeddings without negative samples)
+# See baselines/README.md for an overview of all changes.
+
 import logging
 import numpy as np
 import torch

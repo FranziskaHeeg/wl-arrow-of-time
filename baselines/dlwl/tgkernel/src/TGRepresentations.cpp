@@ -1,3 +1,12 @@
+/*
+ * Modified by Franziska Heeg, Jonas Sauer, Petra Mutzel, Ingo Scholtes (2026) for
+ * "Weisfeiler and Leman Follow the Arrow of Time" (NeurIPS 2026).
+ * Based on the TGKernel reference implementation: https://gitlab.com/tgpublic/tgkernel.
+ * Changes to the original file:
+ *   - optional maximum waiting time delta (TGKERNEL_MAX_WAITING_TIME)
+ * See PATCHES.md for details.
+ */
+
 /**
 This file is part of TGKernel.
 Copyright (C) 2020 Lutz Oettershagen

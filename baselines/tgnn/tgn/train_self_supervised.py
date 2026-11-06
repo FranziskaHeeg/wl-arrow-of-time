@@ -1,3 +1,12 @@
+# Modified by Franziska Heeg, Jonas Sauer, Petra Mutzel, Ingo Scholtes (2026) for
+# "Weisfeiler and Leman Follow the Arrow of Time" (NeurIPS 2026).
+# Based on the TGN reference implementation: https://github.com/twitter-research/tgn (Apache License 2.0, see LICENSE).
+# Changes to the original file:
+#   - save the temporal embedding of the source node of every event to embeddings/ (--embeddings true)
+#   - loss works for batches of size 1
+#   - model checkpoints are no longer saved
+# See baselines/README.md for an overview of all changes.
+
 import math
 import logging
 import time

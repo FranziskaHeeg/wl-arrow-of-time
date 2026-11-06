@@ -1,4 +1,6 @@
 #!/bin/bash
+# Added by Franziska Heeg, Jonas Sauer, Petra Mutzel, Ingo Scholtes (2026) for "Weisfeiler and Leman Follow the Arrow of Time" (NeurIPS 2026);
+# not part of the original repository. Released under the MIT License (see LICENSE at the repository root).
 # CAW: export the empirical tasks, train CAW-N self-supervised on every temporal graph and save its
 # temporal node embeddings to embeddings/. Run from the release root:  bash baselines/tgnn/caw/run_pipeline.sh
 set -euo pipefail

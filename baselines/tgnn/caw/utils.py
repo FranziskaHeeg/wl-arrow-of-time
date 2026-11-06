@@ -1,3 +1,11 @@
+# Modified by Franziska Heeg, Jonas Sauer, Petra Mutzel, Ingo Scholtes (2026) for
+# "Weisfeiler and Leman Follow the Arrow of Time" (NeurIPS 2026).
+# Based on the CAW reference implementation: https://github.com/snap-stanford/CAW (MIT License, see LICENSE).
+# Changes to the original file:
+#   - added --embedding flag
+#   - --data accepts any dataset name
+# See baselines/README.md for an overview of all changes.
+
 import numpy as np
 import torch
 import os
